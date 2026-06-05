@@ -1,4 +1,4 @@
-﻿// Scroll-to-top button
+// Scroll-to-top button
 const scrollBtn = document.getElementById('scrollTopBtn');
 window.addEventListener('scroll', () => {
   scrollBtn.classList.toggle('visible', window.scrollY > 400);
@@ -6,7 +6,8 @@ window.addEventListener('scroll', () => {
 scrollBtn.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
-// 3G's Barber Salon Lounge â€” JavaScript
+
+// 3G's Barber Salon Lounge — JavaScript
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); });
 const hamburger = document.getElementById('hamburger');
@@ -21,7 +22,7 @@ if (bookingForm) {
   bookingForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const btn = document.getElementById('submit-btn-3gs');
-    btn.textContent = 'âœ… Reservation Received! We\'ll confirm shortly.';
+    btn.textContent = '✅ Reservation Received! We\'ll confirm shortly.';
     btn.style.background = '#27ae60';
     btn.disabled = true;
     setTimeout(() => { btn.textContent = 'Reserve My Appointment'; btn.style.background = ''; btn.disabled = false; bookingForm.reset(); }, 4500);
@@ -34,4 +35,3 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.service-card, .about-card, .hours-table-wrap, .contact-card, .pillar').forEach(el => {
   el.style.opacity = '0'; el.style.transform = 'translateY(25px)'; el.style.transition = 'opacity 0.6s ease, transform 0.6s ease'; observer.observe(el);
 });
-
